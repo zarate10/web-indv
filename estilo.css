@@ -1,0 +1,739 @@
+/* ------- fuentes -------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ------- colores (complementarios) website -------- */
+
+:root {
+    --c1: #702fff;
+    --c2: #834AFF;
+    --c3: #3e32c4; 
+    --c4: #ffd53d; 
+    --c5: #ede12d;
+    --cbg: #070508; 
+}
+
+/* ------- estilos generales -------- */
+
+body{
+    background-color: var(--cbg);
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-rows: auto lfr auto;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 30px;
+    color: white;
+    overflow-x: hidden;
+}
+.contenedor{
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+}
+header > .contenedor { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.boton{
+    padding: 10px 20px;
+    background: var(--c1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: 0.3s;
+    color: white;
+    font-weight: 600;
+}
+.boton:hover {
+    background: black;
+    transition: 0.3s;
+    color: var(--c4);
+}
+.destacado{
+    background-color: var(--c3);
+    color: white;
+    padding: 5px 30px 30px;
+    border-radius: 20px;
+}
+header .mob {
+    display: none;
+}
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+    color: var(--c1);
+}
+.center-wrapper { 
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.box-subtitulo { 
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+.subtitulo { 
+    position: relative;
+    letter-spacing: 0.5px;
+    color: white;
+}
+.box-subtitulo::after{
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 10px;
+    background: var(--c1);
+    bottom: 24px;
+    left: -5px;
+    border-radius: 30px;
+    z-index: -1;
+}
+
+/* ------- header -------- */
+
+header .contenedor { 
+    display: flex;
+    justify-content: center;
+}
+header li{
+    display: inline-block;
+    padding: 1px 25px;
+}
+header ul:hover > li a {
+    color: rgba(255, 255, 255, 0.61);
+    transition: 0.3s;
+}
+header li:hover > a { 
+    color: var(--c4) !important;
+    opacity: 1;
+    transition: 0.3s;
+}
+header #logo{
+    font-family: 'Abril Fatface', cursive;
+}
+
+header .nav-link {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    opacity: 0.5;
+}
+li .actual{
+    opacity: 1;
+}
+#logo {
+    transition: 0.6s;
+}
+#logo h1{ 
+    font-weight: 300;
+    font-style: oblique;
+    color: var(--c1);
+}
+#logo .marcado { 
+    color: var(--c2);
+}
+
+/* ------- Inicio -------- */
+
+#vidriera{
+    min-height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#vidriera .box {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#vidriera #inicioim { 
+    align-items: center;
+    justify-content: center;
+}
+#vidriera img { 
+    width: 400px;
+    animation: fade .5s linear forwards, float ease 10s infinite;
+}
+#vidriera .box h1{ 
+    font-family: 'Abril Fatface', cursive;
+    font-size: 3em;
+    letter-spacing: 0.4px;
+}
+#vidriera .box p {
+    font-size: 0.85em;
+    margin-top: -25px;
+    opacity: 0.4;
+}
+#vidriera .box .wrapper-button{ 
+    margin-top: 25px;
+}
+#vidriera .box .wrapper-button button { 
+    padding: 10px 30px;
+    background: var(--c1);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: 0.3s;
+    border:2px solid var(--c1);
+    color: white;
+    font-weight: 600;
+}
+#vidriera .box .wrapper-button button:hover {
+    background: transparent;
+    transition: 0.3s;
+    border: 2px solid var(--c1);
+    color: var(--c1);
+}
+@keyframes fade { 
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes float { 
+    0% {
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+    25% {
+        transform: translate(5%, 15%) rotate(360deg);
+    }
+    50% {
+        transform: translate(15%, 5%) rotate(360deg);
+    }
+    75% {
+        transform: translate(20%, 2%) rotate(360deg);
+    }
+    100% {
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+}
+
+
+/* ------- Newsletter -------- */
+#newsletter{
+    max-width: 1100px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: var(--c5);
+    color: black;
+}
+#newsletter .contenedor { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#newsletter input{
+    width: 250px;
+    height: 20px;
+    padding: 8px 15px;
+    border: none;
+    background: rgba(133, 114, 8, 0.726);
+    border-radius: 10px;
+    color: black;
+    margin-right: 15px;
+}
+#newsletter input::placeholder{
+    color: black;
+}
+
+/* ----- boxes habiliidades ------ */
+#boxes > .contenedor { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 700px;
+    gap: 40px;
+}
+#boxes .box{
+    width: 200px;
+    text-align: center;
+
+    transition: 0.3s;
+}
+#boxes .box i{
+    font-size: 5em;
+}
+#boxes h3{
+    margin-bottom: 0px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+#boxes .box:hover { 
+    text-shadow: 5px 5px 0px var(--c1);
+    transition: 0.3s;
+}
+/* footer */
+footer {
+    color: white;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 0px 0px 0px;
+}
+footer > .redes > ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+footer > .redes > ul > li {
+    display: inline-block;
+}
+footer > .redes > ul > li > a,
+footer > .redes > ul > li { 
+    padding: 30px 15px 30px 0px;
+    color: white;
+    transition: 0.5s;
+}
+footer > .redes > ul > li > a:hover{ 
+    transition: 0.5s;
+    text-shadow: 5px 5px 0px var(--c3);
+    font-size: 1.2em;
+}
+footer .copy { 
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: gray;
+}
+footer > table {
+    width: 100%;
+}
+footer > table th { 
+    text-align: left;
+}
+footer > table tr > td { 
+    height: 20px;
+    font-size: 0.9em;
+}
+footer table .rotate {
+    transform: rotate(-90deg);
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 30px;
+
+}
+footer table .box-colors { 
+    width: 115px;
+    height: 170px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+footer table .box-colors .boxc{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    transition: 0.3s;
+    margin: 0;
+}
+footer .color-data{
+    display: none;
+}
+footer table .box-colors .boxc:hover { 
+    transform: scale(1.5);
+    transition: 0.3s;
+}
+footer table .box-colors .boxc:hover > .color-data {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0px 15px 30px;
+    font-size: 0.6em;
+    position: absolute;
+    text-transform: uppercase;
+    color: var(--c5);
+}
+footer > .info-container{ 
+    display: none;
+}
+/* Somos */
+
+#vidriera_somos{
+    min-height: 300px;
+    background-image: url(./img/somos-img.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center; 
+    color: white;
+}
+article#somos-columna{
+    float: left;
+    max-width: 65%;
+}
+
+
+/* IDEAS */
+
+#vidriera_ideas{
+    height: 300px;
+    background-image: url(./img/ideas.svg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-align: center; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#vidriera_ideas h1{
+    font-size: 60px;
+    color: var(--c2);
+    margin-top: 35px;
+    padding: 0;
+}
+.idea ul li{
+    list-style: none;
+    padding: 20px;
+    background-color: #2E2599;
+    color: white;
+    margin-bottom: 10px;
+}
+#ideas > .contenedor {
+    width: 100%; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#ideas .container-imgs {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#ideas .container-imgs .column { 
+    flex: 25%;
+}
+#ideas .container-imgs .column > img { 
+    margin: 5px;
+    max-width: 95%;
+    transition-duration: 0.2s;
+}
+#ideas .container-imgs .column > img:hover{
+    transform: scale(1.5);
+    transition-duration: 0.2s;
+}
+#ideas .container-proyectos { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+#ideas .container-proyectos .box { 
+    display: flex;
+    flex: 23%;
+    flex-direction: column;
+    margin: 10px;
+}
+#ideas .container-proyectos p {
+    font-size: 0.5em;
+    color: white;
+}
+#ideas .container-proyectos span { 
+    font-size: 0.4em;
+    color: gray;
+    position: relative;
+    top: -30px;
+}
+#ideas .container-proyectos img {
+    width: 250px;
+}
+
+/* ------------- contacto -------------- */
+
+#vidriera_contacto{
+    min-height: 300px;
+    background-image: url(./img/pina.jpg);
+    background-size: cover;
+    background-position:center; 
+    text-align: center; 
+    color: var(--c5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contacto .contenedor{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+#contacto article{
+    width: 670px;
+}
+#contacto aside {
+    height: 500px;
+    width: 350px;
+    margin-top: 115px;
+}
+#contacto aside form{ 
+    width: 100%;
+    display: flex;
+
+    flex-direction: column;
+}
+#contacto aside form .separador{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 0.9em;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+#contacto aside form label {
+    margin-bottom: 3px;
+    opacity:  0.8;
+}
+#contacto aside form input, textarea { 
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    background: #7670c23d;
+    color: white;
+}
+#contacto aside form input::placeholder, textarea::placeholder{
+    color: white;
+}
+#contacto aside form button { 
+    margin: 40px 10px 10px 10px;
+    padding: 10px;
+    cursor: pointer;
+    background: var(--c4);
+    border: none;
+    border-radius: 10px;
+}
+
+/* ------------- Media query -------------- */
+
+@media (max-width:850px){
+    #ideas .container-imgs{
+        width: 600px;
+    }
+    #ideas .container-imgs .column { 
+        flex: 50%;
+    }
+    #ideas .container-proyectos .box { 
+        display: flex;
+        align-items: center;
+        flex: 30%;
+        flex-direction: column;
+        margin: 10px;
+    }
+}
+
+@media (max-width:768px){
+
+    /* _______ nav _______ */
+
+    header .desktop { 
+        display: none;
+    }
+
+    header .mob{
+        width: 100%;
+        display: flex;
+
+    }
+    header .mob nav { 
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .mob nav #logo { 
+        font-size: 1.4em;
+    }
+    header .mob nav .menu { 
+        padding: 30px;
+        font-size:2em;
+        color: var(--c2);
+        cursor: pointer;
+    }
+    header .mob nav .desplegar {
+        position: absolute;
+        width: 100%;
+        background: var(--cbg);
+        left: 0;
+        top: 0;
+        transition: 0.6s;
+        z-index: 1;
+        margin-top: -500px;
+    }
+    header .mob nav .desplegar ul li { 
+        display: block;
+        text-align: center;
+        padding: 10px;
+        z-index: 10;
+    }
+    header .mob nav .desplegar .menu {
+        text-align: center;
+        transform: rotate(180deg);
+        z-index: 100000;
+        text-align: center;
+    }
+
+    /* _______inicio_______*/
+
+
+    #vidriera .box{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #vidriera #inicioim { 
+        margin-top: -70px;
+        margin-bottom: 100px;
+    }
+    #vidriera #inicioim img { 
+        width: 300px;
+    }
+    #boxes .contenedor { 
+        width: 440px;
+    }
+
+    #newsletter { 
+        width: 60%;
+        padding: 20px;
+        font-size: 0.8em;
+    }
+    #newsletter h3 { 
+        margin: 0 auto;
+        margin-bottom: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 0.9em;
+    }
+    #newsletter form { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    #newsletter form input { 
+        width: 85%;
+        margin-left: 15px;
+    }
+    #newsletter form button { 
+        width: 50%;
+    } 
+
+    /* _______ideas_______*/
+
+    #ideas .container-imgs{
+        width: 200px;
+    }
+    #ideas .container-imgs .column { 
+        flex: 100%;
+    }
+    #ideas .container-proyectos .box { 
+        display: flex;
+
+        align-items: center;
+        flex: 100%;
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    /* _______footer_______*/
+    footer .lg {
+        display: none;
+    }
+    footer .info-container {
+        max-width: 100%;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
+    footer .redes{ 
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    footer .copy { 
+        font-size: 0.7em;
+    }
+
+    /* ________contacto_______ */
+    #contacto .contenedor{ 
+        display: flex;
+        justify-content: center;
+    }
+    #contacto article{
+        width:300px;
+    }
+    #contacto aside{
+        width:300px;
+    }
+}
+
+#react {
+    animation: react 50000s infinite;
+}
+@keyframes react { 
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% { 
+        transform: rotate(10000000deg);
+    }
+}
+
+.loaderbg {
+	position: fixed;
+    width: 150vw;
+    height: 100vh;
+    background: var(--cbg);
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+#preloader{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	background:  var(--c2);
+	height: 50px;
+	width: 50px;
+	border-radius: 100px;
+    transform-origin: center center;
+	animation: pulse 2s 800ms infinite both;
+}
+
+@keyframes pulse {
+  0%   { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+	50%  { opacity: 0.7; transform: translate(-50%, -50%) scale(0.6);}
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1);}
+}
+
+.container-proyectos .titulo { 
+    font-size: 2em;
+}
